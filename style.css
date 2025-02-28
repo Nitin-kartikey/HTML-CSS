@@ -21,8 +21,8 @@ body {
     background-color: #ffff;
     border-radius:12px;
     color:rgba(0, 0, 0, 0.4);
-    width:370px;
-    height: auto;
+    width:300px;
+    height: 165;
 }
 div.card-box_link{
     margin: 15px 30px 25px 30px;
@@ -33,7 +33,6 @@ div.card-box_link{
 }
 div.card-box_img{
     text-align: right;
-    overflow: clip;
 }
 .card-box_title {
     color: #ffcc09;
@@ -51,50 +50,63 @@ div.card-box_img{
     margin-right: 30px;
     margin-left: 30px;
 }
-/*@media screen and (max-width: 768px) {
+.card-box { 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    height: 165px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    border-radius: 12px;
+    color: rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+.card-box_img { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    overflow: hidden;
+}
+.card-box_img img {
+    width: 120px; 
+    height: 120px; 
+    object-fit: contain;
+}
+.card-box_title {
+    color: #ffcc09;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: GTWalsheim, sans-serif;
+    margin-bottom: 5px;
+}
+.card-box_desc {
+    color: #808080;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.card-box_link {
+    margin-top: auto;
+    color: #00000066;
+    font-size: 14px;
+    font-family: GTWalsheim;
+    text-decoration: none;
+}
+@media screen and (max-width: 768px) {
     .card-container {
-        flex-direction: columns;
+        flex-direction: column;
         align-items: center;
     }
-    .card-box {
-        width: 90%;
-        max-width: 400px;
-    }
 }
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    .card-container {
-        justify-content: row-reverse;
-        width: 20%;
-    }
-    .card-box {
-        flex: 1;
-        width: 30%;
-        max-width: 350px;
-    }
+.card-box {
+    width: 90%; 
+    height: auto;
 }
-@media screen and (min-width: 1025px){
-    .card-container{
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .card-box{
-        flex: 1;
-        width: 30%;
-        max-width: 350px;
-    }   
+.card-box_img img {
+    width: 120px;
+    height: 120px;
 }
-@media screen and (min-width: 1024px){
-    .card-container{
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-self: center;
-        justify-content: center;
-    }
-    .card-box{
-        flex: 1;
-        width: 30%;
-        max-width: 350px;
-    }   
+.card-box_title {
+    font-size: 18px;
 }
-
